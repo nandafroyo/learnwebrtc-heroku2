@@ -1,0 +1,7 @@
+{
+  "name": "Belajar",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/nandafroyo/coba-heroku2",
+  "keywords": ["node", "webrtc", "static"],
+  "image": "heroku/nodejs"
+}
