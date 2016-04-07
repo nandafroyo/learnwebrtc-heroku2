@@ -323,7 +323,7 @@ function stop() {
 //application and whose code is reproduced in the following:
 
 
-var static = require('node-static');
+var static = require('https://belajarwebrtc2.herokuapp.com:8000/node_modules/node-static');
 var http = require('http');
 
 // Create a node-static server instance
