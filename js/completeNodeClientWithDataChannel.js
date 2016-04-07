@@ -318,6 +318,7 @@ function stop() {
 	sendButton.disabled=true;
 }
 
+<!--
 //Based on the information contained in Chapter 4, the reader should face no issues in
 //understanding the behavior of the signaling server, which has been written as a Node.js
 //application and whose code is reproduced in the following:
@@ -378,3 +379,4 @@ array.push(arguments[i]);
 socket.emit('log', array);
 }
 });
+-->
