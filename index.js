@@ -19,7 +19,7 @@ var app = http.createServer(function (req, res) {
 
 
 // Create a node-static server instance
-var file = new(static.Server)();
+//var file = new(static.Server)();
 // We use the http module’s createServer function and
 // rely on our instance of node-static to serve the files
 
