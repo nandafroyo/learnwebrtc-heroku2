@@ -12,7 +12,7 @@ var file = new(static.Server)();
 app.use(express.static(__dirname + '/'));
 
 
-var app = http.createServer(function (req, res) {
+var port = http.createServer(function (req, res) {
 	file.serve(req, res);
 }).listen(8000);
 
