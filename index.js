@@ -9,14 +9,14 @@
 //var file = new(static.Server)();
 //var server = app.listen(8000);
 
-var app = require('express').createServer();
-var io = require('socket.io')(app);
+//var app = require('express').createServer();
+//var io = require('socket.io')(app);
 
-app.listen(8000);
+//app.listen(8000);
 
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
-});
+//app.get('/', function (req, res) {
+  //res.sendfile(__dirname + '/index.html');
+//});
 
 
 //var app = require('express')();
@@ -56,7 +56,20 @@ app.get('/', function (req, res) {
 // We use the http module’s createServer function and
 // rely on our instance of node-static to serve the files
 
+var app = express();
+app.get('/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
+});
 
+var static = require('node-static');
+var http = require('http');
+// Create a node-static server instance
+var file = new(static.Server)();
+// We use the http module’s createServer function and
+// rely on our instance of node-static to serve the files
+var app = http.createServer(function (req, res) {
+file.serve(req, res);
+}).listen(8000);
 
 // Use socket.io JavaScript library for real-time web applications
 var io = require('socket.io').listen(app);
