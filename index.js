@@ -55,7 +55,7 @@
 //var file = new(static.Server)();
 // We use the http module’s createServer function and
 // rely on our instance of node-static to serve the files
-
+var express = require('express');
 var app = express();
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
