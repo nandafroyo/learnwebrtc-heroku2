@@ -1,20 +1,27 @@
-var express = require('express');
-var app = express();
-var static = require('node-static');
-var http = require('http');
+//var express = require('express');
+//var app = express();
+//var static = require('node-static');
+//var http = require('http');
 
 //var http = require('http');
 //var io = require('socket.io').listen(server);
 
-var file = new(static.Server)();
+//var file = new(static.Server)();
 //var server = app.listen(8000);
 
+var http = require('http');
+var express = require('express'),
+    app = module.exports.app = express();
+
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);  //pass a http.Server instance
+server.listen(8000);
 app.use(express.static(__dirname + '/'));
 
 
-var port = http.createServer(function (req, res) {
-	file.serve(req, res);
-}).listen(8000);
+//var port = http.createServer(function (req, res) {
+//	file.serve(req, res);
+//}).listen(8000);
 
 
 
