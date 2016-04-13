@@ -7,13 +7,13 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "ejs": "2.3.3",
-    "express": "4.13.3",
-    "node-static": "0.7.1",
-    "socket.io": "0.9"
+    "ejs": "*",
+    "express": "*",
+    "node-static": "*",
+    "socket.io": "*"
   },
   "engines": {
-    "node": "0.12.7"
+    "node": "*"
   },
   "repository": {
     "type": "git",
