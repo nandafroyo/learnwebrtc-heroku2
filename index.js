@@ -9,16 +9,26 @@
 //var file = new(static.Server)();
 //var server = app.listen(8000);
 
-var app = require('express')();
-var static = require('node-static');
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+var app = require('express').createServer();
+var io = require('socket.io')(app);
 
-server.listen(8000);
+app.listen(8000);
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
+
+
+//var app = require('express')();
+//var static = require('node-static');
+//var server = require('http').Server(app);
+//var io = require('socket.io')(server);
+
+//server.listen(8000);
+
+//app.get('/', function (req, res) {
+  //res.sendfile(__dirname + '/index.html');
+//});
 
 
 
