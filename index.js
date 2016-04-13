@@ -9,17 +9,29 @@
 //var file = new(static.Server)();
 //var server = app.listen(8000);
 
+var app = require('express')();
 var static = require('node-static');
-var http = require('http');
-var express = require('express'),
-    app = module.exports.app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
-app.use(express.static(__dirname + '/'));
-
-
-var server = http.createServer(app);
-var io = require('socket.io').listen(server);  //pass a http.Server instance
 server.listen(8000);
+
+app.get('/', function (req, res) {
+  res.sendfile(__dirname + '/index.html');
+});
+
+
+
+//var http = require('http');
+//var express = require('express'),
+  //  app = module.exports.app = express();
+
+//app.use(express.static(__dirname + '/'));
+
+
+//var server = http.createServer(app);
+//var io = require('socket.io').listen(server);  //pass a http.Server instance
+//server.listen(8000);
 
 
 
