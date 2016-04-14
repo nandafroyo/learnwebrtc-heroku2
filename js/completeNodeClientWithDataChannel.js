@@ -56,8 +56,8 @@ var sdpConstraints = {};
 var room = prompt('Enter room name:');
 
 // Connect to signaling server
-var socket = io.connect("https://belajarwebrtc2.herokuapp.com");
-
+//var socket = io.connect("https://belajarwebrtc2.herokuapp.com");
+var socket = io.connect();
 // Send 'Create or join' message to singnaling server
 if (room !== '') {
 	console.log('Create or join room', room);
