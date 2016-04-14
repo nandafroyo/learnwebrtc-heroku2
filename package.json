@@ -10,7 +10,7 @@
     "ejs": "*",
     "express": "*",
     "node-static": "*",
-    "socket.io": "*"
+    "socket.io": "0.9.6"
   },
   "engines": {
     "node": "*"
